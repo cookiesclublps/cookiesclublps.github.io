@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<title>Cookies Club</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Cardo', serif;}
+body,html {height: 100%; line-height: 1.8;}
+.bgimg-1,.bgimg-2,.bgimg-3 {background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.bgimg-1 {background-image: url('wall.png'); min-height: 100%;}
+.w3-hover-opacity {cursor: pointer;}
+@media only screen and (max-device-width: 1600px) {
+.bgimg-1,.bgimg-2,.bgimg-3 {background-attachment: scroll; min-height: 400px;}
+}
+</style>
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-cookie-bite"></i> About</a>
+    <a href="#schedule" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> Schedule</a>
+    <a href="#archive" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-file"></i> Archive</a>
+  </div>
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()"> About</a>
+    <a href="#schedule" class="w3-bar-item w3-button" onclick="toggleFunction()"> Schedule</a>
+    <a href="#archive" class="w3-bar-item w3-button" onclick="toggleFunction()"> Archive</a>
+  </div>
+</div>
+
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-xlarge w3-animate-opacity">Cookies Club - <i>Monthly seminar for non-permanent people at LPS Orsay</i></span>
+	<p>Next meeting: December 12, 2018 [1 speaker needed]</p>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3>About the Cookies Club: principles & team</h3>
+  <p>The club meets once a month, on a Wednesday at 5pm.</p> 
+  <p>At each session, two people are expected to give a talk, on a voluntary basis. Their presentation should last about 15-20 minutes and is followed by a few minutes of questions. Presenters have a lot of freedom to choose the subject of their talk: of course this can be a specific aspect of their PhD/Post-Doc work, but it can also be related to their doctoral mission or about an article they have found interesting. It just has to be about Physics and be understandable by everyone (indeed, the language of the club is English). Try to be as didactic as possible: we strongly recommend spending the first few minutes of the presentation making a general introduction that will put everyone on the same level before presenting results and their interpretations. A good way to organize the presentation is to formulate a problem and answer it.</p> 
+  <p>For the club to be successful in a durable way, every member should ideally speak twice during the duration of their PhD/Post-Doc. So don't hesitate to register, it will be a good training for your next oral interventions in front of assemblies much more intimidating than a few hungry students.</p>
+  <p>The club is currently managed by Manon Marchand (2nd year PhD student, team MMOI), Chaima Essghaier (3rd year PhD student, team HP) and Eloi Haltz (3rd year PhD student, team IDMAG).</p>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="schedule">
+  <h3>Schedule</h3>
+  <p>This is the current version of the schedule. To register, you can edit the table <a href="https://docs.google.com/spreadsheets/d/1IPaRP37AwdgK87c15K4sHmI1dhMPGGYnO-IOZRaIUtM/edit#gid=0">here</a> or simply send an email to cookiesclublps@gmail.com specifying your name, subject and the day that suits you.</p>
+  <iframe width="930" height="600" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGO6-x4iL3HReBgubkCiGWlf1oKMfg8In-9Gha0FPD4gJDBtVdhkqLKP0_8wySmHIatV_HToYomBad/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" frameborder="0"></iframe>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="archive">
+  <h3>Archive</h3>
+  Here you will find some of the presentations that have been given at the club.
+  <p><a href="4_1_barthelemy.pdf">Cookies 4: Quentin Barthélemy</a></p>
+  <p><a href="6_2_louat.pdf">Cookies 6: Alex Louat</a></p>
+</div>
+ 
+<script>
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+
+</html>
